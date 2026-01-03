@@ -3,285 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sanju Gupta - Senior Business Professional specializing in channel expansion, dealer networks, and market execution across India.">
-    <meta name="author" content="Sanju Gupta">
-    <title>Sanju Gupta | Business Growth & Strategy</title>
-
+    <title>Sanju Gupta | Head of Channel Management</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS VARIABLES FOR CONSISTENCY --- */
         :root {
-            --bg-color: #FAFAFA;       /* Premium Off-White */
-            --text-primary: #1A1A1A;   /* Deep Charcoal */
-            --text-secondary: #4A4A4A; /* Softer Grey */
-            --accent-color: #2C3E50;   /* Executive Slate */
-            --border-color: #E0E0E0;   /* Subtle Border */
-            --spacing-unit: 2rem;
-            --max-width: 800px;
+            --bg-base: #f8f8f5; /* Light Parchment */
+            --bg-alt: #f1f1ed; /* Soft Stone */
+            --text-main: #1a1a1a;
+            --text-muted: #5a5a5a;
+            --midnight: #002347; /* Deep Midnight Blue */
+            --accent-gold: #967d4b; /* Muted Bronze/Gold */
+            --border: #e2e2d8;
+            --max-width: 850px;
         }
 
-        /* --- RESET & BASE STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
+        
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
+            margin: 0; padding: 0;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.8;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            padding: 0 var(--spacing-unit);
         }
 
-        /* --- TYPOGRAPHY --- */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
+        /* Top Accent Bar */
+        .top-bar {
+            height: 6px;
+            background: var(--midnight);
+            width: 100%;
         }
 
-        h1 {
-            font-size: 3rem;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            margin-top: 3rem;
-        }
-
-        h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: #555;
-        }
-
-        /* --- LAYOUT CONTAINER --- */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding-top: 8rem;
-            padding-bottom: 6rem;
+            padding: 0 40px;
         }
 
-        /* --- SECTIONS --- */
-        section {
-            margin-bottom: 5rem;
+        header {
+            padding: 80px 0 60px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .branding h1 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 2.4rem; /* Increased for authority */
+            margin: 0;
+            letter-spacing: -0.03em;
+            color: var(--midnight);
+            font-weight: 700;
+        }
+
+        .designation {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            font-weight: 700;
         }
 
         /* Hero Section */
-        .hero-sub {
+        .hero { margin-bottom: 120px; }
+
+        .hero h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            margin-bottom: 40px;
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+        }
+
+        .hero p {
             font-size: 1.25rem;
-            color: var(--text-secondary);
-            font-weight: 300;
-            border-left: 2px solid var(--text-primary);
-            padding-left: 1rem;
-            margin-top: 1rem;
-        }
-
-        /* Expertise Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: #fff;
-            padding: 2rem;
-            border: 1px solid var(--border-color);
-            border-radius: 4px; /* Minimal radius, not too rounded */
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            font-family: 'Inter', sans-serif; /* Clean sans for small headers */
-            font-weight: 500;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
-
-        /* Divider */
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border-color);
-            margin: 4rem 0;
-        }
-
-        /* Button / CTA */
-        .btn {
-            display: inline-block;
-            background-color: var(--text-primary);
-            color: #fff;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            border-radius: 2px;
-            letter-spacing: 0.02em;
-            margin-top: 1rem;
+            color: var(--text-muted);
+            max-width: 90%;
             font-weight: 400;
         }
 
-        .btn:hover {
-            background-color: #333;
-            color: #fff;
+        /* Mandate Section with Subtle Background */
+        .mandate-section {
+            background-color: var(--bg-alt);
+            margin: 0 -100vw;
+            padding: 100px 100vw;
+            overflow: hidden;
         }
 
-        /* Footer */
-        footer {
-            text-align: left;
+        .section-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            font-weight: 800;
+            margin-bottom: 60px;
+            display: block;
+        }
+
+        .mandate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .mandate-item h3 {
+            font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
-            color: #888;
-            margin-top: 6rem;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            color: var(--midnight);
+            letter-spacing: 0.05em;
         }
 
-        footer a {
-            color: #555;
-            text-decoration: underline;
-            text-underline-offset: 4px;
+        .mandate-item p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin: 0;
         }
 
-        /* --- ANIMATION --- */
-        .fade-in {
-            animation: fadeIn 1.2s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
+        /* Philosophy */
+        .philosophy {
+            padding: 120px 0;
+            text-align: center;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .quote {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: var(--midnight);
+            margin-bottom: 30px;
+            line-height: 1.3;
         }
 
-        /* --- RESPONSIVE --- */
+        .quote-context {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Professional Network Footer */
+        .network {
+            border-top: 1px solid var(--border);
+            padding: 100px 0;
+        }
+
+        .network-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .network-box h2 {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.75rem;
+            margin: 0 0 10px 0;
+            color: var(--midnight);
+        }
+
+        .ln-link {
+            font-weight: 700;
+            color: var(--midnight);
+            text-decoration: none;
+            border: 2px solid var(--midnight);
+            padding: 12px 24px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .ln-link:hover {
+            background: var(--midnight);
+            color: white;
+        }
+
+        footer {
+            background: var(--midnight);
+            color: rgba(255,255,255,0.6);
+            padding: 60px 0;
+            font-size: 0.75rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding-top: 4rem;
-            }
-            
-            h1 {
-                font-size: 2.25rem;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
+            header { flex-direction: column; align-items: flex-start; gap: 15px; padding-top: 50px; }
+            .hero h2 { font-size: 2rem; }
+            .mandate-grid { grid-template-columns: 1fr; gap: 40px; }
+            .network-box { flex-direction: column; align-items: flex-start; gap: 40px; }
+            .philosophy { padding: 80px 0; }
+            .quote { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <main class="container fade-in">
-        
-        <section>
-            <h1>Sanju Gupta</h1>
-            <div class="hero-sub">
-                Building resilient dealer networks and driving<br> 
-                market execution across India.
+    <div class="top-bar"></div>
+
+    <div class="container">
+        <header>
+            <div class="branding">
+                <h1>Sanju Gupta</h1>
             </div>
-        </section>
+            <div class="designation">Channel Activation & Enablement</div>
+        </header>
 
-        <section>
-            <p>
-                In a market as complex as India, strategy often fails at the last mile. My career has been defined not just by creating growth plans, but by the operational rigor required to execute them.
-            </p>
-            <p>
-                I am a business professional focused on channel expansion, partner ecosystems, and market activation. I bridge the gap between corporate vision and on-ground reality, ensuring that brands don't just reach new territories—they thrive in them. 
-            </p>
-        </section>
+        <main>
+            <section class="hero">
+                <h2>Defining the intersection of corporate strategy and market execution.</h2>
+                <p>
+                    Specializing in the development of resilient partner ecosystems across the Indian subcontinent, 
+                    bridging the distance between high-level vision and the operational rigor required 
+                    to drive growth at the last mile.
+                </p>
+            </section>
 
-        <hr>
-
-        <section>
-            <h2>Core Competencies</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Channel Expansion</h3>
-                    <p>Identifying untapped territories and structuring the right distribution models to penetrate deep-tier markets effectively.</p>
-                </div>
-                <div class="card">
-                    <h3>Partner Network Management</h3>
-                    <p>Cultivating long-term, profitable relationships with dealers and distributors based on trust and mutual growth.</p>
-                </div>
-                <div class="card">
-                    <h3>Market Activation</h3>
-                    <p>Translating brand strategy into actionable, localized sales drivers that yield measurable results.</p>
-                </div>
-                <div class="card">
-                    <h3>Operational Scale</h3>
-                    <p>Building the systems and processes required to scale from regional pilot programs to pan-India operations.</p>
+            <div class="mandate-section">
+                <div class="container" style="padding:0;">
+                    <span class="section-label">Strategic Mandate</span>
+                    <div class="mandate-grid">
+                        <div class="mandate-item">
+                            <h3>Ecosystem Enablement</h3>
+                            <p>Architecting the frameworks that allow dealer and distributor networks to scale through technological integration and process consistency.</p>
+                        </div>
+                        <div class="mandate-item">
+                            <h3>Market Activation</h3>
+                            <p>Translating organizational objectives into localized sales drivers that respect regional market nuances and dealer economics.</p>
+                        </div>
+                        <div class="mandate-item">
+                            <h3>Channel Excellence</h3>
+                            <p>Optimizing the value chain to ensure long-term alignment between manufacturer objectives and retail frontline execution.</p>
+                        </div>
+                        <div class="mandate-item">
+                            <h3>Sustainable Scale</h3>
+                            <p>Developing the institutional systems necessary to transition regional success into standardized, pan-India operational frameworks.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section>
-            <h2>Philosophy</h2>
-            <p>
-                <strong>Business moves at the speed of trust.</strong>
-            </p>
-            <p>
-                Technology has evolved, and metrics have become more sophisticated, but the fundamental nature of business remains human. I believe that sustainable growth isn't forced; it is engineered through consistent execution and respecting the value chain—from the manufacturer down to the last retailer.
-            </p>
-        </section>
+            <section class="philosophy">
+                <div class="quote">
+                    "Business moves at the speed of trust."
+                </div>
+                <p class="quote-context">
+                    In a rapidly digitizing economy, the human element remains the fundamental driver of scale. 
+                    Sustainable growth is engineered by respecting the integrity of the entire value chain.
+                </p>
+            </section>
 
-        <hr>
+            <section class="network">
+                <div class="network-box">
+                    <div>
+                        <h2>Professional Network</h2>
+                        <p style="color:var(--text-muted); margin:0;">Engaging with the evolving landscape of Indian retail and distribution.</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/sanjugupta01" class="ln-link" target="_blank">LinkedIn Profile</a>
+                </div>
+            </section>
+        </main>
+    </div>
 
-        <section>
-            <h2>Connect</h2>
-            <p>I am always open to discussing market dynamics, operational challenges, and potential collaborations.</p>
-            
-            <a href="https://www.linkedin.com/in/sanjugupta01" target="_blank" rel="noopener noreferrer" class="btn">
-                View Profile on LinkedIn
-            </a>
-        </section>
-
-        <footer>
-            &copy; <script>document.write(new Date().getFullYear())</script> Sanju Gupta. All rights reserved.<br>
-            <br>
-            <a href="mailto:contact@sanjugupta.com">contact@sanjugupta.com</a>
-        </footer>
-
-    </main>
+    <footer>
+        <div class="footer-content">
+            <div>© 2024 Sanju Gupta.</div>
+            <div style="text-align: right;">Professional insights expressed are personal. <br> contact@sanjugupta.com</div>
+        </div>
+    </footer>
 
 </body>
 </html>
