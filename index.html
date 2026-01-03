@@ -1,290 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanju Gupta | Head of Channel Management</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-base: #f8f8f5; /* Light Parchment */
-            --bg-alt: #f1f1ed; /* Soft Stone */
-            --text-main: #1a1a1a;
-            --text-muted: #5a5a5a;
-            --midnight: #002347; /* Deep Midnight Blue */
-            --accent-gold: #967d4b; /* Muted Bronze/Gold */
-            --border: #e2e2d8;
-            --max-width: 850px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { box-sizing: border-box; }
-        
-        body {
-            margin: 0; padding: 0;
-            background-color: var(--bg-base);
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-        }
+<title>Sanju G. | Channel Management – Expansion, Activation & Enablement</title>
+<meta name="description" content="Sanju G. is a senior business leader with over 18 years of experience in channel management, expansion, activation, and enablement, driving structured execution across India.">
 
-        /* Top Accent Bar */
-        .top-bar {
-            height: 6px;
-            background: var(--midnight);
-            width: 100%;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+<style>
+:root {
+    --midnight-green: #144721;
+    --midnight-green-dark: #0f3a1b;
+    --accent: #c9a24d;
+    --bg-main: #f6f7f5;
+    --text-main: #121212;
+    --text-muted: #555;
+    --white: #ffffff;
+    --max-width: 880px;
+}
 
-        header {
-            padding: 80px 0 60px 0;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+* { box-sizing: border-box; }
 
-        .branding h1 {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 2.4rem; /* Increased for authority */
-            margin: 0;
-            letter-spacing: -0.03em;
-            color: var(--midnight);
-            font-weight: 700;
-        }
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.75;
+}
 
-        .designation {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
+.wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 80px 36px;
+}
 
-        /* Hero Section */
-        .hero { margin-bottom: 120px; }
+/* ---------- HERO ---------- */
+.hero {
+    background: linear-gradient(
+        180deg,
+        var(--midnight-green) 0%,
+        var(--midnight-green-dark) 100%
+    );
+    color: var(--white);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
 
-        .hero h2 {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 2.8rem;
-            line-height: 1.15;
-            margin-bottom: 40px;
-            color: var(--text-main);
-            letter-spacing: -0.01em;
-        }
+.hero .wrapper {
+    padding: 0 36px;
+    position: relative;
+}
 
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 90%;
-            font-weight: 400;
-        }
+/* LOGO TOP RIGHT */
+.logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
-        /* Mandate Section with Subtle Background */
-        .mandate-section {
-            background-color: var(--bg-alt);
-            margin: 0 -100vw;
-            padding: 100px 100vw;
-            overflow: hidden;
-        }
+.logo img {
+    width: 68px;
+    height: auto;
+}
 
-        .section-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-gold);
-            font-weight: 800;
-            margin-bottom: 60px;
-            display: block;
-        }
+/* HERO TEXT */
+.hero h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3.2rem;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.01em;
+}
 
-        .mandate-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
+.hero .role {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 36px;
+}
 
-        .mandate-item h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin: 0 0 15px 0;
-            text-transform: uppercase;
-            color: var(--midnight);
-            letter-spacing: 0.05em;
-        }
+.hero p {
+    max-width: 700px;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.88);
+}
 
-        .mandate-item p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
+/* ---------- CONTENT ---------- */
+section {
+    margin-top: 120px;
+}
 
-        /* Philosophy */
-        .philosophy {
-            padding: 120px 0;
-            text-align: center;
-        }
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 35px;
+    display: block;
+}
 
-        .quote {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 2.2rem;
-            font-style: italic;
-            color: var(--midnight);
-            margin-bottom: 30px;
-            line-height: 1.3;
-        }
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    margin: 0 0 30px 0;
+}
 
-        .quote-context {
-            font-size: 1rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 760px;
+}
 
-        /* Professional Network Footer */
-        .network {
-            border-top: 1px solid var(--border);
-            padding: 100px 0;
-        }
+/* ---------- GRID ---------- */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+}
 
-        .network-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.grid h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
 
-        .network-box h2 {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.75rem;
-            margin: 0 0 10px 0;
-            color: var(--midnight);
-        }
+.grid p {
+    font-size: 1rem;
+}
 
-        .ln-link {
-            font-weight: 700;
-            color: var(--midnight);
-            text-decoration: none;
-            border: 2px solid var(--midnight);
-            padding: 12px 24px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: all 0.3s ease;
-        }
+/* ---------- QUOTE ---------- */
+.quote {
+    margin-top: 120px;
+    padding-left: 30px;
+    border-left: 3px solid var(--accent);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 760px;
+    color: var(--text-main);
+}
 
-        .ln-link:hover {
-            background: var(--midnight);
-            color: white;
-        }
+/* ---------- FOOTER ---------- */
+footer {
+    margin-top: 140px;
+    padding: 70px 36px;
+    background: linear-gradient(
+        180deg,
+        var(--midnight-green-dark),
+        var(--midnight-green)
+    );
+    color: rgba(255,255,255,0.85);
+}
 
-        footer {
-            background: var(--midnight);
-            color: rgba(255,255,255,0.6);
-            padding: 60px 0;
-            font-size: 0.75rem;
-        }
+.footer-inner {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+.footer-left {
+    font-size: 0.85rem;
+}
 
-        @media (max-width: 768px) {
-            header { flex-direction: column; align-items: flex-start; gap: 15px; padding-top: 50px; }
-            .hero h2 { font-size: 2rem; }
-            .mandate-grid { grid-template-columns: 1fr; gap: 40px; }
-            .network-box { flex-direction: column; align-items: flex-start; gap: 40px; }
-            .philosophy { padding: 80px 0; }
-            .quote { font-size: 1.6rem; }
-        }
-    </style>
+.footer-right a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--white);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 3px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .hero { min-height: auto; padding: 80px 0; }
+    .hero h1 { font-size: 2.4rem; }
+    .grid { grid-template-columns: 1fr; }
+    footer { padding: 60px 24px; }
+    .logo img { width: 56px; }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="top-bar"></div>
+<!-- HERO -->
+<div class="hero">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="sg-logo.JPEG" alt="SG Logo">
+        </div>
 
-    <div class="container">
-        <header>
-            <div class="branding">
-                <h1>Sanju Gupta</h1>
-            </div>
-            <div class="designation">Channel Activation & Enablement</div>
-        </header>
+        <h1>Sanju G.</h1>
 
-        <main>
-            <section class="hero">
-                <h2>Defining the intersection of corporate strategy and market execution.</h2>
+        <div class="role">
+            Channel Management – Expansion, Activation & Enablement
+        </div>
+
+        <p>
+            I operate at the intersection of corporate strategy and on-ground execution,
+            building structured channel ecosystems that translate organizational intent
+            into consistent market performance across India.
+        </p>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="wrapper">
+
+    <section>
+        <span class="section-label">Professional Focus</span>
+        <h2>Driving execution clarity across complex channel environments</h2>
+        <p>
+            With over 18 years of experience across retail operations, sales leadership,
+            and partner-led growth, my work centers on strengthening governance,
+            capability, and execution discipline across multi-tier channel networks.
+        </p>
+    </section>
+
+    <section>
+        <span class="section-label">Core Responsibilities</span>
+        <div class="grid">
+            <div>
+                <h3>Channel Architecture</h3>
                 <p>
-                    Specializing in the development of resilient partner ecosystems across the Indian subcontinent, 
-                    bridging the distance between high-level vision and the operational rigor required 
-                    to drive growth at the last mile.
+                    Designing scalable partner frameworks that balance growth ambition
+                    with operational sustainability and regional realities.
                 </p>
-            </section>
-
-            <div class="mandate-section">
-                <div class="container" style="padding:0;">
-                    <span class="section-label">Strategic Mandate</span>
-                    <div class="mandate-grid">
-                        <div class="mandate-item">
-                            <h3>Ecosystem Enablement</h3>
-                            <p>Architecting the frameworks that allow dealer and distributor networks to scale through technological integration and process consistency.</p>
-                        </div>
-                        <div class="mandate-item">
-                            <h3>Market Activation</h3>
-                            <p>Translating organizational objectives into localized sales drivers that respect regional market nuances and dealer economics.</p>
-                        </div>
-                        <div class="mandate-item">
-                            <h3>Channel Excellence</h3>
-                            <p>Optimizing the value chain to ensure long-term alignment between manufacturer objectives and retail frontline execution.</p>
-                        </div>
-                        <div class="mandate-item">
-                            <h3>Sustainable Scale</h3>
-                            <p>Developing the institutional systems necessary to transition regional success into standardized, pan-India operational frameworks.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <section class="philosophy">
-                <div class="quote">
-                    "Business moves at the speed of trust."
-                </div>
-                <p class="quote-context">
-                    In a rapidly digitizing economy, the human element remains the fundamental driver of scale. 
-                    Sustainable growth is engineered by respecting the integrity of the entire value chain.
+            <div>
+                <h3>Partner Enablement</h3>
+                <p>
+                    Building capability-led ecosystems through structured onboarding,
+                    training, and performance enablement models.
                 </p>
-            </section>
+            </div>
 
-            <section class="network">
-                <div class="network-box">
-                    <div>
-                        <h2>Professional Network</h2>
-                        <p style="color:var(--text-muted); margin:0;">Engaging with the evolving landscape of Indian retail and distribution.</p>
-                    </div>
-                    <a href="https://www.linkedin.com/in/sanjugupta01" class="ln-link" target="_blank">LinkedIn Profile</a>
-                </div>
-            </section>
-        </main>
+            <div>
+                <h3>Market Activation</h3>
+                <p>
+                    Translating strategy into localized execution programs that drive
+                    adoption, visibility, and revenue consistency.
+                </p>
+            </div>
+
+            <div>
+                <h3>Operational Governance</h3>
+                <p>
+                    Establishing systems, processes, and controls that allow scale
+                    without erosion of quality or brand intent.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote">
+        “Sustainable growth is built quietly — through trust, discipline,
+        and respect for every layer of the value chain.”
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div>© 2024 Sanju Gupta.</div>
-            <div style="text-align: right;">Professional insights expressed are personal. <br> contact@sanjugupta.com</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-left">
+            © 2024 Sanju G.<br>
+            All views expressed are personal and aligned with professional experience.
         </div>
-    </footer>
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/sanjugupta01" target="_blank">
+                LinkedIn Profile
+            </a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
