@@ -1,181 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanju Gupta | Business & Channel Growth Leader</title>
-<meta name="description" content="Sanju Gupta – Business leader with expertise in channel expansion, partnerships, and scalable growth across India.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sanju Gupta - Senior Business Professional specializing in channel expansion, dealer networks, and market execution across India.">
+    <meta name="author" content="Sanju Gupta">
+    <title>Sanju Gupta | Business Growth & Strategy</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: #1f2933;
-    background: #f8fafc;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-.hero {
-    background: linear-gradient(135deg, #0b5394, #073763);
-    color: #ffffff;
-    padding: 90px 20px;
-    text-align: center;
-}
+    <style>
+        /* --- CSS VARIABLES FOR CONSISTENCY --- */
+        :root {
+            --bg-color: #FAFAFA;       /* Premium Off-White */
+            --text-primary: #1A1A1A;   /* Deep Charcoal */
+            --text-secondary: #4A4A4A; /* Softer Grey */
+            --accent-color: #2C3E50;   /* Executive Slate */
+            --border-color: #E0E0E0;   /* Subtle Border */
+            --spacing-unit: 2rem;
+            --max-width: 800px;
+        }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-}
+        /* --- RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.hero p {
-    font-size: 18px;
-    max-width: 760px;
-    margin: auto;
-    line-height: 1.6;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 0 var(--spacing-unit);
+        }
 
-.linkedin-btn {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 14px 32px;
-    background: #0a66c2;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 16px;
-}
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
 
-.linkedin-btn:hover {
-    background: #084a8f;
-}
+        h1 {
+            font-size: 3rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 3rem;
+        }
 
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 18px;
-    color: #0b5394;
-}
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 22px;
-}
+        p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
 
-.card {
-    background: #ffffff;
-    padding: 26px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-}
+        a {
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: color 0.2s ease;
+        }
 
-.card h3 {
-    margin-top: 0;
-    color: #073763;
-}
+        a:hover {
+            color: #555;
+        }
 
-.cta {
-    background: #ffffff;
-    padding: 40px;
-    margin-top: 60px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
+        /* --- LAYOUT CONTAINER --- */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-top: 8rem;
+            padding-bottom: 6rem;
+        }
 
-.cta a {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 12px 28px;
-    background: #0b5394;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-}
+        /* --- SECTIONS --- */
+        section {
+            margin-bottom: 5rem;
+        }
 
-footer {
-    margin-top: 80px;
-    text-align: center;
-    color: #6b7280;
-    font-size: 14px;
-    padding-bottom: 30px;
-}
-</style>
+        /* Hero Section */
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            border-left: 2px solid var(--text-primary);
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Expertise Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px; /* Minimal radius, not too rounded */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-family: 'Inter', sans-serif; /* Clean sans for small headers */
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Divider */
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 4rem 0;
+        }
+
+        /* Button / CTA */
+        .btn {
+            display: inline-block;
+            background-color: var(--text-primary);
+            color: #fff;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 2px;
+            letter-spacing: 0.02em;
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: left;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 6rem;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* --- ANIMATION --- */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .container {
+                padding-top: 4rem;
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Sanju Gupta</h1>
-    <p>
-        Business leader specializing in channel expansion, partnerships, and scalable growth.
-        Experienced in building dealer networks, driving market activation, and enabling
-        long-term business success across India.
-    </p>
+    <main class="container fade-in">
+        
+        <section>
+            <h1>Sanju Gupta</h1>
+            <div class="hero-sub">
+                Building resilient dealer networks and driving<br> 
+                market execution across India.
+            </div>
+        </section>
 
-    <a class="linkedin-btn"
-       href="https://www.linkedin.com/in/sanjugupta01"
-       target="_blank">
-        Connect on LinkedIn
-    </a>
-</section>
+        <section>
+            <p>
+                In a market as complex as India, strategy often fails at the last mile. My career has been defined not just by creating growth plans, but by the operational rigor required to execute them.
+            </p>
+            <p>
+                I am a business professional focused on channel expansion, partner ecosystems, and market activation. I bridge the gap between corporate vision and on-ground reality, ensuring that brands don't just reach new territories—they thrive in them. 
+            </p>
+        </section>
 
-<!-- ABOUT -->
-<section class="container section">
-    <h2>Professional Summary</h2>
-    <p>
-        I work at the intersection of strategy, execution, and relationships.
-        With hands-on experience in channel management, partner onboarding,
-        and market expansion, I focus on building sustainable growth models
-        that work on-ground, not just on presentations.
-    </p>
-</section>
+        <hr>
 
-<!-- EXPERTISE -->
-<section class="container section">
-    <h2>Core Expertise</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Channel Expansion</h3>
-            <p>Dealer onboarding, territory planning, partner evaluation, and scalable expansion frameworks.</p>
-        </div>
-        <div class="card">
-            <h3>Business Development</h3>
-            <p>Strategic partnerships, revenue growth, and execution-driven go-to-market strategies.</p>
-        </div>
-        <div class="card">
-            <h3>Market Activation</h3>
-            <p>BTL activities, influencer engagement, and localized market penetration models.</p>
-        </div>
-        <div class="card">
-            <h3>Process & Systems</h3>
-            <p>CRM adoption, SOP creation, evaluation frameworks, and operational governance.</p>
-        </div>
-    </div>
-</section>
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Channel Expansion</h3>
+                    <p>Identifying untapped territories and structuring the right distribution models to penetrate deep-tier markets effectively.</p>
+                </div>
+                <div class="card">
+                    <h3>Partner Network Management</h3>
+                    <p>Cultivating long-term, profitable relationships with dealers and distributors based on trust and mutual growth.</p>
+                </div>
+                <div class="card">
+                    <h3>Market Activation</h3>
+                    <p>Translating brand strategy into actionable, localized sales drivers that yield measurable results.</p>
+                </div>
+                <div class="card">
+                    <h3>Operational Scale</h3>
+                    <p>Building the systems and processes required to scale from regional pilot programs to pan-India operations.</p>
+                </div>
+            </div>
+        </section>
 
-<!-- CTA -->
-<section class="container cta">
-    <h2>Let’s Connect</h2>
-    <p>
-        For professional discussions, collaborations, or business opportunities,
-        feel free to connect with me on LinkedIn.
-    </p>
-    <a href="https://www.linkedin.com/in/sanjugupta01" target="_blank">
-        View LinkedIn Profile
-    </a>
-</section>
+        <section>
+            <h2>Philosophy</h2>
+            <p>
+                <strong>Business moves at the speed of trust.</strong>
+            </p>
+            <p>
+                Technology has evolved, and metrics have become more sophisticated, but the fundamental nature of business remains human. I believe that sustainable growth isn't forced; it is engineered through consistent execution and respecting the value chain—from the manufacturer down to the last retailer.
+            </p>
+        </section>
 
-<footer>
-    © 2026 Sanju Gupta · All rights reserved
-</footer>
+        <hr>
+
+        <section>
+            <h2>Connect</h2>
+            <p>I am always open to discussing market dynamics, operational challenges, and potential collaborations.</p>
+            
+            <a href="https://www.linkedin.com/in/sanjugupta01" target="_blank" rel="noopener noreferrer" class="btn">
+                View Profile on LinkedIn
+            </a>
+        </section>
+
+        <footer>
+            &copy; <script>document.write(new Date().getFullYear())</script> Sanju Gupta. All rights reserved.<br>
+            <br>
+            <a href="mailto:contact@sanjugupta.com">contact@sanjugupta.com</a>
+        </footer>
+
+    </main>
 
 </body>
 </html>
