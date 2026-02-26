@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanju G | Growth Infrastructure Consultant</title>
+    <title>Sanju G | Growth Infrastructure & Channel Governance Architect</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,7 +30,6 @@
 
         h1, h2, h3, .logo-text { font-family: 'Playfair Display', serif; }
 
-        /* HEADER */
         header {
             position: fixed;
             width: 100%;
@@ -62,87 +61,128 @@
         }
         nav a:hover { color: var(--gold); }
 
-        /* HERO - UPDATED BACKGROUND */
         .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 0 10%;
-            background-color: var(--charcoal); /* Fallback color */
-            /* Lighter overlay (0.75 opacity) so the image is clearer */
-            background: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), 
+            background: linear-gradient(rgba(26, 26, 26, 0.82), rgba(26, 26, 26, 0.82)), 
                         url('https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            /* Parallax effect for premium feel */
             background-attachment: fixed;
         }
 
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--gold); margin-bottom: 20px; }
+        .hero h1 { 
+            font-size: clamp(2.5rem, 6vw, 4.5rem); 
+            color: var(--gold); 
+            margin-bottom: 20px; 
+            text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
         .hero p {
-            font-size: 1.1rem; max-width: 600px; color: var(--white);
-            margin-bottom: 35px; border-left: 3px solid var(--king-green); padding-left: 20px;
+            font-size: 1.1rem; 
+            max-width: 700px; 
+            color: var(--white);
+            margin-bottom: 20px; 
+            border-left: 3px solid var(--king-green); 
+            padding-left: 20px;
+        }
+
+        .hero-metrics {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 30px;
         }
 
         .btn-gold {
-            display: inline-block; padding: 18px 40px; background: var(--gold);
-            color: var(--charcoal); font-weight: 700; text-decoration: none;
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.4s;
-            cursor: pointer; border: none;
+            display: inline-block; 
+            padding: 18px 40px; 
+            background: var(--gold);
+            color: var(--charcoal); 
+            font-weight: 700; 
+            text-decoration: none;
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            transition: 0.4s;
+            cursor: pointer; 
+            border: none;
         }
-        .btn-gold:hover { background: var(--king-green); color: var(--white); transform: translateY(-3px); }
 
-        /* SECTIONS */
+        .btn-gold:hover { 
+            background: var(--king-green); 
+            color: var(--white); 
+            transform: translateY(-3px); 
+        }
+
         section { padding: 120px 10%; }
-        .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; margin-bottom: 10px; display: block; }
 
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: rgba(255,255,255,0.03); padding: 40px; border: 1px solid rgba(212, 175, 55, 0.1); transition: 0.4s; }
-        .card:hover { border-color: var(--king-green); background: rgba(11, 70, 25, 0.1); }
+        .section-label { 
+            color: var(--gold); 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 0.75rem; 
+            margin-bottom: 10px; 
+            display: block; 
+        }
+
+        .card-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+        }
+
+        .card { 
+            background: rgba(255,255,255,0.03); 
+            padding: 40px; 
+            border: 1px solid rgba(212, 175, 55, 0.1); 
+            transition: 0.4s; 
+        }
+
+        .card:hover { 
+            border-color: var(--king-green); 
+            background: rgba(11, 70, 25, 0.1); 
+        }
+
         .card h3 { color: var(--gold); margin-bottom: 15px; }
 
-        /* MODAL POPUP */
-        .modal-overlay {
-            position: fixed; top:0; left:0; width:100%; height:100%;
-            background: var(--modal-bg); display: none;
-            justify-content: center; align-items: center; z-index: 2000;
-            backdrop-filter: blur(10px);
+        footer { 
+            background: #0f0f0f; 
+            padding: 60px 10% 30px; 
+            border-top: 1px solid var(--king-green); 
         }
-        .modal-content {
-            background: var(--charcoal); padding: 50px; border: 1px solid var(--gold);
-            width: 90%; max-width: 500px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-        .close-modal {
-            position: absolute; top: 15px; right: 20px; color: var(--gold);
-            font-size: 1.5rem; cursor: pointer;
-        }
-        .modal-content h2 { color: var(--gold); margin-bottom: 25px; text-align: center; }
-        
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.8rem; margin-bottom: 8px; color: var(--gold); letter-spacing: 1px;}
-        .form-group input {
-            width: 100%; padding: 15px; background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(212, 175, 55, 0.3); color: white; outline: none;
-            font-family: 'Inter';
-        }
-        .form-group input:focus { border-color: var(--gold); background: rgba(255,255,255,0.1); }
 
-        /* FOOTER */
-        footer { background: #0f0f0f; padding: 60px 10% 30px; border-top: 1px solid var(--king-green); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-grid { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr 1fr; 
+            gap: 40px; 
+            margin-bottom: 40px; 
+        }
 
         .whatsapp-float {
-            position: fixed; bottom: 30px; right: 30px; background: var(--king-green);
-            color: white; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            text-decoration: none; font-size: 25px; z-index: 1000; border: 1px solid var(--gold);
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background: var(--king-green);
+            color: white; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            text-decoration: none; 
+            font-size: 25px; 
+            z-index: 1000; 
+            border: 1px solid var(--gold);
         }
 
         @media (max-width: 768px) { 
             .footer-grid { grid-template-columns: 1fr; } 
             nav { display: none; }
-            .hero { background-attachment: scroll; } /* Turn off parallax on mobile for performance */
+            .hero { background-attachment: scroll; }
         }
     </style>
 </head>
@@ -151,160 +191,97 @@
 <header>
     <div class="logo-container">
         <div class="logo-box">SG</div>
-        <div class="logo-text" style="color: var(--gold); font-size: 1.1rem; letter-spacing: 1.5px;">SANJU G</div>
+        <div class="logo-text" style="color: var(--gold); font-size: 1.1rem; letter-spacing: 1.5px;">SANJU GUPTA</div>
     </div>
     <nav>
-        <a href="#about">Expertise</a>
-        <a href="#services">Specialisations</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Infrastructure</a>
+        <a href="#services">Governance</a>
+        <a href="#contact">Engage</a>
     </nav>
 </header>
 
 <div class="hero">
-    <span class="section-label" data-aos="fade-right">Legacy of Results</span>
-    <h1 data-aos="fade-up">Growth Infrastructure <br>Architect</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Scaling hospitality, telecom, and distribution networks through 18 years of proven, field-tested systems.</p>
-    <div data-aos="fade-up" data-aos-delay="400">
-        <button class="btn-gold" onclick="openModal()">Start Your Transformation</button>
+    <span class="section-label">Institutional Growth Architecture</span>
+    <h1>Designing the Structural Backbone<br>That Enables Scalable Expansion</h1>
+    <p>
+        I build institutional-grade channel infrastructure, governance systems, 
+        and national expansion frameworks for organizations transitioning 
+        from opportunistic growth to structured scalability.
+    </p>
+    <div class="hero-metrics">
+        100+ Channel Partners | Department Built from Scratch | National Rollout Infrastructure | 18+ Years Multi-Industry Execution
     </div>
+    <button class="btn-gold">Request Executive Consultation</button>
 </div>
 
 <section id="about">
-    <span class="section-label">The Journey</span>
-    <h2 style="font-size: 2.5rem; color: var(--gold);">Global Authority.</h2>
+    <span class="section-label">Infrastructure Built</span>
+    <h2 style="font-size: 2.5rem; color: var(--gold);">From Zero to Fully Structured Channel Department</h2>
     <div class="card-grid">
-        <div class="card" data-aos="fade-up">
-            <h3>Scale</h3>
-            <p>100+ channel partners mentored. Scaling brands from 5 to 7 to ₹25L+ investment formats.</p>
+        <div class="card">
+            <h3>Governance Framework</h3>
+            <p>Designed and institutionalized BPFs, SOPs, SODs, audit systems, compliance structures, and a comprehensive Channel Manual.</p>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Operations</h3>
-            <p>Mastered hospitality and telecom sectors with new and digital transformed stors and self explanerty centers blueprints.</p>
+        <div class="card">
+            <h3>Department Architecture</h3>
+            <p>Built the complete channel function from scratch — hiring the team, defining reporting rhythms (DWM), and embedding accountability systems.</p>
+        </div>
+        <div class="card">
+            <h3>National Standardization</h3>
+            <p>Created uniform showroom design formats ensuring brand consistency, ambiance alignment, and customer experience standardization across zones.</p>
         </div>
     </div>
 </section>
 
 <section id="services" style="background: rgba(11, 70, 25, 0.05);">
-    <span class="section-label">Expertise</span>
-    <h2 style="font-size: 2.5rem; color: var(--gold);">Primary Focus</h2>
+    <span class="section-label">Core Capability</span>
+    <h2 style="font-size: 2.5rem; color: var(--gold);">Growth Infrastructure & Channel Governance</h2>
     <div class="card-grid">
-        <div class="card" data-aos="zoom-in">
-            <h3>Dealer Networks</h3>
-            <p>Territory mapping and conflict-free expansion models.</p>
+        <div class="card">
+            <h3>Channel Infrastructure Design</h3>
+            <p>Territory structuring, investment modeling, onboarding evaluation, and conflict-free expansion architecture.</p>
         </div>
-        <div class="card" data-aos="zoom-in" data-aos-delay="100">
-            <h3>Café Infrastructure</h3>
-            <p>SOP design, unit economics, and staff training systems.</p>
+        <div class="card">
+            <h3>Institutional Process Engineering</h3>
+            <p>Creation of SOP ecosystems, review mechanisms, audit formats, and scalable governance frameworks.</p>
         </div>
-        <div class="card" data-aos="zoom-in" data-aos-delay="200">
-            <h3>Sales Architecture</h3>
-            <p>KPI dashboards and high-performance team alignment.</p>
+        <div class="card">
+            <h3>National Feasibility Evaluation</h3>
+            <p>Extensive on-ground evaluation across India to assess market viability, partner quality, and long-term scalability potential.</p>
         </div>
     </div>
 </section>
 
 <section id="contact">
-    <div style="text-align: center; border: 1px solid var(--gold); padding: 80px 40px; background: linear-gradient(rgba(26,26,26,0.9), rgba(26,26,26,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center;">
-        <h2 style="color: var(--gold); margin-bottom: 20px;">Ready to Architect Your Growth?</h2>
-        <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Contact Sanju G for board-level advisory or ground-level infrastructure setup.</p>
-        <button class="btn-gold" onclick="openModal()">Schedule Strategy Call</button>
+    <div style="text-align: center; border: 1px solid var(--gold); padding: 80px 40px;">
+        <h2 style="color: var(--gold); margin-bottom: 20px;">Engage for Institutional-Level Growth Architecture</h2>
+        <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Advisory engagements are selectively undertaken for organizations committed to structural transformation and scalable national expansion.
+        </p>
+        <a href="mailto:contact@sanjugupta.com" class="btn-gold">Schedule Executive Discussion</a>
     </div>
 </section>
 
 <footer>
     <div class="footer-grid">
         <div>
-            <div style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; font-family: 'Playfair Display';">SG | SANJU G</div>
-            <p style="opacity: 0.6; font-size: 0.85rem;">Helping businesses transition from chaotic growth to structured scalability.</p>
+            <div style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; font-family: 'Playfair Display';">SANJU GUPTA</div>
+            <p style="opacity: 0.6; font-size: 0.85rem;">Architecting institutional growth systems for scalable expansion.</p>
         </div>
-        <div class="footer-links">
-            <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase;">Navigation</h4>
-            <ul style="list-style: none; font-size: 0.85rem; opacity: 0.7;">
-                <li><a href="#about" style="color: inherit; text-decoration: none;">Expertise</a></li>
-                <li><a href="#services" style="color: inherit; text-decoration: none;">Services</a></li>
-                <li><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
+        <div>
             <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase;">Direct</h4>
             <ul style="list-style: none; font-size: 0.85rem; opacity: 0.7;">
                 <li><a href="mailto:contact@sanjugupta.com" style="color: inherit; text-decoration: none;">contact@sanjugupta.com</a></li>
-                <a href="https://www.linkedin.com/in/sanjugupta01/" target="_blank" rel="noopener">LinkedIn</a>
+                <li><a href="https://www.linkedin.com/in/sanjugupta01/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a></li>
             </ul>
         </div>
     </div>
-    <p style="text-align: center; opacity: 0.4; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+    <p style="text-align: center; opacity: 0.4; font-size: 0.75rem; padding-top: 30px;">
         © 2026 SANJU GUPTA. ALL RIGHTS RESERVED.
     </p>
 </footer>
 
-<div class="modal-overlay" id="consultationModal">
-    <div class="modal-content" data-aos="zoom-in">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <h2>Request Consultation</h2>
-        <p style="text-align: center; margin-bottom: 30px; font-size: 0.9rem; opacity: 0.8;">Enter your details below. We prioritize inquiries from established businesses looking for structural transformation.</p>
-        <form onsubmit="sendToWhatsApp(event)">
-    <div class="form-group">
-        <label>FULL NAME</label>
-        <input type="text" id="userName" required>
-    </div>
-    <div class="form-group">
-        <label>WORK EMAIL</label>
-        <input type="email" id="userEmail" required>
-    </div>
-    <div class="form-group">
-        <label>PHONE NUMBER</label>
-        <input type="tel" id="userPhone" required>
-    </div>
-    <button type="submit" class="btn-gold" style="width: 100%;">Submit to WhatsApp</button>
-</form>
-    </div>
-</div>
+<a href="https://wa.me/919599949991" class="whatsapp-float" target="_blank">💬</a>
 
-<a href="https://wa.me/+919599949991" class="whatsapp-float" target="_blank">💬</a>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 1000, once: true, offset: 50 });
-
-    function openModal() {
-        document.getElementById('consultationModal').style.display = 'flex';
-        document.body.style.overflow = 'hidden'; 
-    }
-
-    function closeModal() {
-        document.getElementById('consultationModal').style.display = 'none';
-        document.body.style.overflow = 'auto'; 
-    }
-
-    // THIS IS THE WHATSAPP LOGIC
-    function sendToWhatsApp(event) {
-        event.preventDefault(); // Stops the page from refreshing
-        
-        // Get values from the form fields
-        const name = document.getElementById('userName').value;
-        const email = document.getElementById('userEmail').value;
-        const phone = document.getElementById('userPhone').value;
-        
-        // Format the message for WhatsApp
-        const message = `*New Consultation Request*%0A` +
-                        `--------------------------%0A` +
-                        `*Name:* ${name}%0A` +
-                        `*Email:* ${email}%0A` +
-                        `*Phone:* ${phone}%0A` +
-                        `--------------------------%0A` +
-                        `Hello Sanju G, I would like to schedule a strategy call regarding growth infrastructure.`;
-
-        // Opens WhatsApp with the formatted message
-        window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
-        
-        closeModal(); // Close the popup after sending
-    }
-
-    window.onclick = function(event) {
-        let modal = document.getElementById('consultationModal');
-        if (event.target == modal) { closeModal(); }
-    }
-</script>
 </body>
 </html>
