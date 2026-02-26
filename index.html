@@ -243,21 +243,21 @@
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <h2>Request Consultation</h2>
         <p style="text-align: center; margin-bottom: 30px; font-size: 0.9rem; opacity: 0.8;">Enter your details below. We prioritize inquiries from established businesses looking for structural transformation.</p>
-        <form>
-            <div class="form-group">
-                <label>FULL NAME</label>
-                <input type="text" required>
-            </div>
-            <div class="form-group">
-                <label>WORK EMAIL</label>
-                <input type="email" required>
-            </div>
-            <div class="form-group">
-                <label>PHONE NUMBER</label>
-                <input type="tel" required>
-            </div>
-            <button type="submit" class="btn-gold" style="width: 100%;">Submit Request</button>
-        </form>
+        <form onsubmit="sendToWhatsApp(event)">
+    <div class="form-group">
+        <label>FULL NAME</label>
+        <input type="text" id="userName" required>
+    </div>
+    <div class="form-group">
+        <label>WORK EMAIL</label>
+        <input type="email" id="userEmail" required>
+    </div>
+    <div class="form-group">
+        <label>PHONE NUMBER</label>
+        <input type="tel" id="userPhone" required>
+    </div>
+    <button type="submit" class="btn-gold" style="width: 100%;">Submit to WhatsApp</button>
+</form>
     </div>
 </div>
 
@@ -269,21 +269,42 @@
 
     function openModal() {
         document.getElementById('consultationModal').style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        document.body.style.overflow = 'hidden'; 
     }
 
     function closeModal() {
         document.getElementById('consultationModal').style.display = 'none';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        document.body.style.overflow = 'auto'; 
+    }
+
+    // THIS IS THE WHATSAPP LOGIC
+    function sendToWhatsApp(event) {
+        event.preventDefault(); // Stops the page from refreshing
+        
+        // Get values from the form fields
+        const name = document.getElementById('userName').value;
+        const email = document.getElementById('userEmail').value;
+        const phone = document.getElementById('userPhone').value;
+        
+        // Format the message for WhatsApp
+        const message = `*New Consultation Request*%0A` +
+                        `--------------------------%0A` +
+                        `*Name:* ${name}%0A` +
+                        `*Email:* ${email}%0A` +
+                        `*Phone:* ${phone}%0A` +
+                        `--------------------------%0A` +
+                        `Hello Sanju, I would like to schedule a strategy call regarding growth infrastructure.`;
+
+        // Opens WhatsApp with the formatted message
+        window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
+        
+        closeModal(); // Close the popup after sending
     }
 
     window.onclick = function(event) {
         let modal = document.getElementById('consultationModal');
-        if (event.target == modal) {
-            closeModal();
-        }
+        if (event.target == modal) { closeModal(); }
     }
 </script>
-
 </body>
 </html>
