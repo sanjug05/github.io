@@ -15,7 +15,7 @@
             --gold: #d4af37;
             --champagne: #f7e7ce;
             --white: #ffffff;
-            --modal-bg: rgba(0, 0, 0, 0.9);
+            --modal-bg: rgba(0, 0, 0, 0.95);
         }
 
         * {margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth;}
@@ -34,7 +34,7 @@
         header {
             position: fixed; width: 100%; padding: 20px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(26, 26, 26, 0.9); border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(26, 26, 26, 0.95); border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             z-index: 1000; backdrop-filter: blur(10px);
         }
 
@@ -51,17 +51,47 @@
         }
         nav a:hover { color: var(--gold); }
 
-        /* HERO */
+        /* HERO - RE-FIXED BACKGROUND */
         .hero {
             height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
-            background: linear-gradient(rgba(26, 26, 26, 0.88), rgba(26, 26, 26, 0.88)), 
-                        url('https://images.unsplash.com/photo-1522071823991-b99c223004be?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
+            position: relative;
         }
 
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); color: var(--gold); margin-bottom: 25px; line-height: 1.2; }
-        .hero p { font-size: 1.15rem; max-width: 750px; color: var(--white); margin-bottom: 30px; border-left: 3px solid var(--king-green); padding-left: 20px; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); color: var(--gold); margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; max-width: 800px; color: var(--white); margin-bottom: 35px; border-left: 4px solid var(--king-green); padding-left: 25px; }
 
+        /* PROVEN ACTUALS BAR */
+        .metrics-bar {
+            display: flex; gap: 40px; margin-top: 20px; border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 30px;
+        }
+        .metric-item { display: flex; flex-direction: column; }
+        .metric-value { color: var(--gold); font-size: 1.8rem; font-weight: 700; font-family: 'Playfair Display'; }
+        .metric-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.7; }
+
+        /* SECTIONS */
+        section { padding: 100px 10%; }
+        .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; margin-bottom: 15px; display: block; }
+
+        /* TRACK RECORD GRID (THE ACTUALS) */
+        .track-record { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .record-card { 
+            background: rgba(255,255,255,0.03); padding: 40px; 
+            border: 1px solid rgba(212, 175, 55, 0.1); position: relative; overflow: hidden;
+        }
+        .record-card::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--king-green);
+        }
+        .record-card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* THE PILLARS */
+        .timeline-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 50px; }
+        .timeline-step { position: relative; padding: 30px; border-top: 1px solid var(--gold); background: rgba(255, 255, 255, 0.01); }
+        .step-num { position: absolute; top: 10px; right: 20px; font-size: 2.5rem; color: rgba(212, 175, 55, 0.1); font-family: 'Playfair Display'; }
+
+        /* BUTTONS */
         .btn-gold {
             display: inline-block; padding: 18px 45px; background: var(--gold);
             color: var(--charcoal); font-weight: 700; text-decoration: none;
@@ -70,42 +100,20 @@
         }
         .btn-gold:hover { background: var(--king-green); color: var(--white); transform: translateY(-3px); }
 
-        /* THE PILLARS */
-        .timeline-container {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 60px; position: relative;
-        }
-        .timeline-step { position: relative; padding: 35px; border-top: 2px solid var(--gold); background: rgba(255, 255, 255, 0.02); transition: 0.4s; }
-        .timeline-step:hover { background: rgba(11, 70, 25, 0.1); }
-        .step-number { font-family: 'Playfair Display'; font-size: 3rem; color: rgba(212, 175, 55, 0.1); position: absolute; top: 10px; right: 20px; }
-        .timeline-step h4 { color: var(--gold); margin-bottom: 15px; font-size: 1.1rem; text-transform: uppercase; }
-
-        /* SECTIONS */
-        section { padding: 120px 10%; }
-        .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; margin-bottom: 15px; display: block; }
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { background: rgba(255,255,255,0.02); padding: 50px 40px; border: 1px solid rgba(212, 175, 55, 0.1); transition: 0.4s; }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-
         /* MODAL */
         .modal-overlay {
             position: fixed; top:0; left:0; width:100%; height:100%;
             background: var(--modal-bg); display: none;
             justify-content: center; align-items: center; z-index: 2000;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
         .modal-content { background: var(--charcoal); padding: 50px; border: 1px solid var(--gold); width: 90%; max-width: 500px; position: relative; }
         .close-modal { position: absolute; top: 15px; right: 20px; color: var(--gold); font-size: 1.5rem; cursor: pointer; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.75rem; margin-bottom: 8px; color: var(--gold); }
-        .form-group input { width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(212, 175, 55, 0.3); color: white; outline: none; }
 
-        /* FOOTER */
         footer { background: #0a0a0a; padding: 80px 10% 40px; border-top: 1px solid var(--king-green); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
         .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: var(--king-green); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 25px; z-index: 1000; border: 1px solid var(--gold); }
 
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } nav { display: none; } }
+        @media (max-width: 768px) { nav { display: none; } .metrics-bar { flex-direction: column; gap: 20px; } }
     </style>
 </head>
 <body>
@@ -116,63 +124,85 @@
         <div class="logo-text" style="color: var(--gold); font-size: 1.1rem; letter-spacing: 1.5px;">SANJU GUPTA</div>
     </div>
     <nav>
-        <a href="#about">Capability</a>
-        <a href="#methodology">The Pillars</a>
-        <a href="#contact">Engage</a>
+        <a href="#track-record">Execution</a>
+        <a href="#methodology">Governance</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <div class="hero">
     <span class="section-label" data-aos="fade-right">Growth Infrastructure Architect</span>
-    <h1 data-aos="fade-up">Scaling Profitability Through<br>Institutionalized Governance</h1>
-    <p data-aos="fade-up" data-aos-delay="200">I design the structural frameworks required for national rollouts—specializing in QSR networks, building material distribution, and multi-industry channel expansion.</p>
-    <div data-aos="fade-up" data-aos-delay="400">
-        <button class="btn-gold" onclick="openModal()">Request Executive Briefing</button>
+    <h1 data-aos="fade-up">From Chaos to <br>Institutional Scale</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Building the structural backbone for national expansion—specializing in QSR, Building Materials, and complex distribution networks.</p>
+    
+    <div class="metrics-bar" data-aos="fade-up" data-aos-delay="400">
+        <div class="metric-item">
+            <span class="metric-value">100+</span>
+            <span class="metric-label">Channels Built</span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-value">18+ Yrs</span>
+            <span class="metric-label">Industry Mastery</span>
+        </div>
+        <div class="metric-item">
+            <span class="metric-value">800 sq.ft</span>
+            <span class="metric-label">Standard Formats</span>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;" data-aos="fade-up" data-aos-delay="600">
+        <button class="btn-gold" onclick="openModal()">Request Executive Consultation</button>
     </div>
 </div>
 
-<section id="methodology" style="background: #141414;">
-    <span class="section-label">Institutional Strategy</span>
-    <h2 style="font-size: 2.5rem; color: var(--gold);">The Four Pillars of Scaling</h2>
-    <div class="timeline-container">
-        <div class="timeline-step" data-aos="fade-up">
-            <span class="step-number">01</span>
-            <h4>Diagnostic Audit</h4>
-            <p>Identifying leaks in unit economics and mapping the white space in territory distribution.</p>
+<section id="track-record">
+    <span class="section-label">On-Ground Execution</span>
+    <h2 style="font-size: 2.5rem; color: var(--gold); margin-bottom: 10px;">Proven Actuals & Impact</h2>
+    <p style="opacity: 0.8; max-width: 700px; margin-bottom: 40px;">Deep field experience in architecting profitable, scalable channel ecosystems.</p>
+    
+    <div class="track-record">
+        <div class="record-card" data-aos="fade-up">
+            <h3>Institutional Scale</h3>
+            <p>Successfully built **100+ channel partners** from the ground up, transitioning brands from local presence to national infrastructure.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
-            <span class="step-number">02</span>
-            <h4>Infrastructure Build</h4>
-            <p>Creating SOPs and BPFs tailored for high-frequency QSR environments or heavy-goods distribution.</p>
+        <div class="record-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Investment Architect</h3>
+            <p>Designed and launched **₹25L+ investment models**, ensuring high-yield unit economics for franchisees and partners.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
-            <span class="step-number">03</span>
-            <h4>Partner Governance</h4>
-            <p>Institutionalizing Dealer/Franchisee manuals and review rhythms for zero-drift execution.</p>
+        <div class="record-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>National Branding</h3>
+            <p>Engineered and standardized **800 sq.ft. showroom formats**, ensuring uniform customer experience and brand identity across zones.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
-            <span class="step-number">04</span>
-            <h4>Standardized Growth</h4>
-            <p>Scaling from pilot to national rollout using standardized showroom and unit design formats.</p>
+        <div class="record-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>High-Performance Sales</h3>
+            <p>Led massive sales teams across **Telecom and Restaurant sectors**, implementing rigorous KPI systems and daily/weekly review rhythms.</p>
         </div>
     </div>
 </section>
 
-<section id="about">
-    <span class="section-label">Industry Impact</span>
-    <h2 style="font-size: 2.5rem; color: var(--gold);" data-aos="fade-up">Proven Success Across Verticals</h2>
-    <div class="card-grid">
-        <div class="card" data-aos="fade-up">
-            <h3>Restaurants & QSR</h3>
-            <p>Scaling brands through rigorous unit economics, kitchen SOP standardization, and rapid franchisee onboarding frameworks.</p>
+<section id="methodology" style="background: #141414;">
+    <span class="section-label">The Strategy</span>
+    <h2 style="font-size: 2.5rem; color: var(--gold);">Governance Framework</h2>
+    <div class="timeline-container">
+        <div class="timeline-step" data-aos="fade-up">
+            <span class="step-num">01</span>
+            <h4>Diagnostic</h4>
+            <p>Audit of unit economics and identifying infrastructure leaks.</p>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Building Materials</h3>
-            <p>Architecting multi-tier distributor networks, showroom branding consistency, and territory governance for hard-goods scaling.</p>
+        <div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
+            <span class="step-num">02</span>
+            <h4>Architecture</h4>
+            <p>Standardizing SOPs/BPFs for QSR and Distribution channels.</p>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Industry Agnostic</h3>
-            <p>From retail to manufacturing—if your growth is chaotic, I build the institutional systems to make it structured and predictable.</p>
+        <div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
+            <span class="step-num">03</span>
+            <h4>Accountability</h4>
+            <p>Implementing review rhythms and governance manuals.</p>
+        </div>
+        <div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
+            <span class="step-num">04</span>
+            <h4>Scaling</h4>
+            <p>Executing national rollouts through standardized blueprints.</p>
         </div>
     </div>
 </section>
@@ -180,16 +210,16 @@
 <section id="contact">
     <div style="text-align: center; border: 1px solid var(--gold); padding: 80px 40px; background: rgba(255,255,255,0.02);" data-aos="zoom-in">
         <h2 style="color: var(--gold); margin-bottom: 20px;">Ready for Structural Transformation?</h2>
-        <p style="margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto;">I help organizations bridge the gap between "Sales Energy" and "Institutional Governance."</p>
+        <p style="margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.8;">Selective advisory for organizations committed to national-level expansion and institutional-grade governance.</p>
         <button class="btn-gold" onclick="openModal()">Schedule Strategy Session</button>
     </div>
 </section>
 
 <footer>
-    <div class="footer-grid">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px;">
         <div>
             <div style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px; font-family: 'Playfair Display';">SANJU GUPTA</div>
-            <p style="opacity: 0.6; font-size: 0.85rem;">Architecting systems for scalable national expansion.</p>
+            <p style="opacity: 0.6; font-size: 0.85rem; max-width: 300px;">Architecting systems for scalable national expansion and deep distribution governance.</p>
         </div>
         <div>
             <h4 style="color: var(--gold); margin-bottom: 20px; font-size: 0.8rem; text-transform: uppercase;">Direct</h4>
@@ -199,16 +229,17 @@
             </ul>
         </div>
     </div>
+    <p style="text-align: center; opacity: 0.2; font-size: 0.75rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px; padding-top: 30px;">© 2026 SANJU GUPTA. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <div class="modal-overlay" id="consultationModal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeModal()">&times;</span>
-        <h2 style="color: var(--gold); text-align: center; margin-bottom: 30px;">Strategic Briefing</h2>
+        <h2 style="color: var(--gold); text-align: center; margin-bottom: 30px;">Executive Briefing</h2>
         <form onsubmit="sendToWhatsApp(event)">
             <div class="form-group"><label>FULL NAME</label><input type="text" id="userName" required></div>
             <div class="form-group"><label>COMPANY / INDUSTRY</label><input type="text" id="userIndustry" required></div>
-            <div class="form-group"><label>EMAIL</label><input type="email" id="userEmail" required></div>
+            <div class="form-group"><label>CONTACT NUMBER</label><input type="tel" id="userPhone" required></div>
             <button type="submit" class="btn-gold" style="width: 100%;">Submit Brief</button>
         </form>
     </div>
@@ -225,8 +256,8 @@
         event.preventDefault();
         const name = document.getElementById('userName').value;
         const industry = document.getElementById('userIndustry').value;
-        const email = document.getElementById('userEmail').value;
-        const message = `*Strategic Inquiry*%0AName: ${name}%0AIndustry: ${industry}%0AEmail: ${email}%0A%0AHello Sanju, I am interested in architecting growth for our organization.`;
+        const phone = document.getElementById('userPhone').value;
+        const message = `*Executive Briefing Request*%0AName: ${name}%0AIndustry: ${industry}%0APhone: ${phone}%0A%0AHello Sanju, I would like to discuss structural growth and governance systems.`;
         window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
         closeModal();
     }
