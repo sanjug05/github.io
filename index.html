@@ -54,7 +54,7 @@
 
         /* HERO */
         .hero {
-            height: 95vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
+            min-height: 95vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
             background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
@@ -63,10 +63,10 @@
             color: var(--gold); text-transform: uppercase; letter-spacing: 5px; 
             font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; display: block;
         }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--white); margin-bottom: 25px; line-height: 1.1; }
+        .hero h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); color: var(--white); margin-bottom: 25px; line-height: 1.1; }
         .hero h1 span { color: var(--gold); }
         .hero p { 
-            font-size: 1.2rem; max-width: 750px; color: rgba(255,255,255,0.8); 
+            font-size: clamp(1rem, 2vw, 1.2rem); max-width: 750px; color: rgba(255,255,255,0.8); 
             margin-bottom: 40px; border-left: 3px solid var(--gold); padding-left: 30px; 
         }
 
@@ -81,7 +81,7 @@
         /* SECTIONS */
         section { padding: 100px 10%; }
         .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.7rem; font-weight: 700; margin-bottom: 20px; display: block; }
-        h2.section-title { font-size: 3rem; color: var(--white); margin-bottom: 50px; }
+        h2.section-title { font-size: clamp(2rem, 5vw, 3rem); color: var(--white); margin-bottom: 50px; }
 
         /* ABOUT GRID */
         .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
@@ -127,7 +127,7 @@
         }
         .btn-gold:hover { background: var(--white); transform: scale(1.01); }
 
-        /* ✅ FLOATING WHATSAPP & MODAL */
+        /* FLOATING WHATSAPP & MODAL */
         .wa-float {
             position: fixed; bottom: 30px; right: 30px; background: #25D366; 
             width: 60px; height: 60px; border-radius: 50%; display: flex; 
@@ -151,10 +151,31 @@
 
         footer { background: #050505; padding: 80px 10% 40px; border-top: 1px solid var(--border); text-align: center; }
 
+        /* ✅ MOBILE OPTIMIZATION TRICKS (ADDITIONS) */
         @media (max-width: 768px) { 
-            .about-grid { grid-template-columns: 1fr; }
-            .contact-card { padding: 30px; }
-            h2.section-title { font-size: 2.2rem; }
+            header { padding: 15px 5%; }
+            nav { display: none; } /* Prevents overlapping on small screens */
+            .logo-container img { height: 35px; }
+
+            section { padding: 60px 6%; }
+            .hero { padding: 0 6%; background-attachment: scroll; } /* Fixes laggy mobile scrolling */
+            .hero h1 { margin-top: 40px; }
+            .hero p { border-left: 2px solid var(--gold); padding-left: 15px; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { order: -1; max-width: 300px; margin: 0 auto; padding: 8px; }
+            
+            .authority-strip { justify-content: center; text-align: center; padding: 25px 5%; }
+            .authority-strip span { width: 100%; margin-bottom: 10px; }
+            
+            .track-card { padding: 30px 20px; }
+            .pillar-box { padding: 30px 20px; }
+            
+            .contact-card { padding: 35px 20px; }
+            .wa-popup { width: 290px; right: 15px; bottom: 90px; }
+            
+            /* Trick: Increase touch target for inputs */
+            .form-group input, .form-group select { font-size: 16px !important; } 
         }
     </style>
 </head>
