@@ -86,7 +86,7 @@
         /* ABOUT GRID */
         .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
         .about-image { border: 1px solid var(--gold); padding: 15px; background: var(--surface); position: relative; }
-        .about-image img { width: 100%; filter: grayscale(0.5); display: block; }
+        .about-image img { width: 100%; filter: grayscale(0.2); display: block; }
 
         /* TRACK RECORD (4 CARDS) */
         .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
@@ -105,13 +105,6 @@
         .pillar-box:hover { background: var(--surface); }
         .pillar-num { font-size: 3rem; color: rgba(212, 175, 55, 0.1); font-family: 'Playfair Display'; font-weight: 900; display: block; }
         .pillar-box h4 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* CASE STUDY */
-        .case-block { 
-            background: var(--surface); border: 1px solid var(--border); padding: 60px; 
-            margin-top: 50px; position: relative;
-        }
-        .case-tag { position: absolute; top: -15px; left: 40px; background: var(--gold); color: black; padding: 6px 20px; font-size: 0.7rem; font-weight: 900; }
 
         /* LEAD CAPTURE FORM */
         .contact-card { 
@@ -133,6 +126,28 @@
             width: 100%; text-align: center;
         }
         .btn-gold:hover { background: var(--white); transform: scale(1.01); }
+
+        /* ✅ FLOATING WHATSAPP & MODAL */
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px; background: #25D366; 
+            width: 60px; height: 60px; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; z-index: 2000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s;
+        }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float svg { width: 32px; height: 32px; fill: white; }
+
+        .wa-popup {
+            position: fixed; bottom: 100px; right: 30px; width: 320px;
+            background: var(--surface); border: 1px solid var(--gold);
+            padding: 30px; display: none; z-index: 2000; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+        .wa-popup h4 { color: var(--gold); margin-bottom: 20px; font-size: 1rem; text-transform: uppercase; }
+        .wa-popup input, .wa-popup textarea {
+            width: 100%; padding: 12px; background: #000; border: 1px solid var(--border);
+            color: white; margin-bottom: 15px; font-family: 'Inter'; outline: none;
+        }
 
         footer { background: #050505; padding: 80px 10% 40px; border-top: 1px solid var(--border); text-align: center; }
 
@@ -182,7 +197,7 @@
         <div data-aos="fade-left">
             <span class="section-label">Institutional Philosophy</span>
             <h2 class="section-title" style="margin-bottom: 30px;">Architecture Over <br>Aspiration.</h2>
-            <p style="margin-bottom: 25px; opacity: 0.8; font-size: 1.1rem;">With 18+ years of industry mastery, I move organizations from "Chaos" to "Scale." My focus is not just growth, but **Channel Governance**—creating systems where performance is a standard, not an accident.</p>
+            <p style="margin-bottom: 25px; opacity: 0.8; font-size: 1.1rem;">With 18+ years of industry mastery, I move organizations from "Chaos" to "Scale." My focus is not just growth, but Channel Governance—creating systems where performance is a standard, not an accident.</p>
             <p style="opacity: 0.6; margin-bottom: 40px;">From architecting 100+ partner channels to designing ₹25L+ investment frameworks, I provide the structural blueprint for national dominance.</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; border-top: 1px solid var(--border); padding-top: 30px;">
@@ -222,8 +237,6 @@
     </div>
 </section>
 
-
-
 <section id="framework">
     <span class="section-label">Strategic Governance</span>
     <h2 class="section-title">The 4-Pillar Blueprint</h2>
@@ -251,33 +264,12 @@
     </div>
 </section>
 
-<section id="case-study" style="background: var(--surface);">
-    <span class="section-label">Featured Actuals</span>
-    <div class="case-block" data-aos="zoom-in">
-        <div class="case-tag">ACTIVE IMPACT: WOK N MOMO</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-            <div>
-                <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 20px;">Chef-Independent <br>QSR Scale</h3>
-                <p style="opacity: 0.8;">Transitioning street-food concepts into institutional powerhouses via central kitchen governance and 100% supply standardization.</p>
-            </div>
-            <div style="border-left: 1px solid var(--border); padding-left: 40px;">
-                <p style="color: var(--gold); font-weight: 700; margin-bottom: 10px;">KEY OUTCOMES:</p>
-                <ul style="list-style: none; font-size: 0.9rem; opacity: 0.7;">
-                    <li style="margin-bottom: 10px;">• Rapid ROI (6-8 Months)</li>
-                    <li style="margin-bottom: 10px;">• Zero Chef Dependency</li>
-                    <li>• Pan-India Format Standardization</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="contact" style="text-align: center;">
     <span class="section-label">Governance Consultation</span>
     <h2 class="section-title">Ready for Structural Transformation?</h2>
     
     <div class="contact-card" data-aos="fade-up">
-        <form id="leadForm" onsubmit="submitToWhatsApp(event)">
+        <form id="leadForm" onsubmit="submitToWhatsAppMain(event)">
             <div class="form-group">
                 <label>FULL NAME</label>
                 <input type="text" id="name" required placeholder="Ex: Rajesh Sharma">
@@ -297,36 +289,58 @@
             </div>
             <button type="submit" class="btn-gold">Capture Details & Open WhatsApp</button>
         </form>
-        <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 25px; font-style: italic;">Note: Currently accepting only 1 new advisory role for Q2 2026.</p>
     </div>
 </section>
 
 <footer>
     <img src="SG.logo.v1.png" style="height: 40px; margin-bottom: 20px;" alt="Sanju G">
+    <div style="margin-bottom: 25px;">
+        <a href="mailto:contact@sanjugupta.com" style="color: var(--gold); text-decoration: none; margin: 0 15px;">contact@sanjugupta.com</a>
+        <a href="https://www.linkedin.com/in/sanjugupta01" target="_blank" style="color: var(--gold); text-decoration: none; margin: 0 15px;">LinkedIn</a>
+    </div>
     <p style="opacity: 0.3; font-size: 0.7rem; letter-spacing: 2px;">© 2026 SANJU GUPTA | ARCHITECTING THE FUTURE OF CHANNEL GOVERNANCE</p>
 </footer>
+
+<div class="wa-float" onclick="toggleWAPopup()">
+    <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.4 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-30-17-41.1-4.5-10.8-9.1-9.3-12.4-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</div>
+
+<div class="wa-popup" id="waPopup">
+    <h4>Connect Direct</h4>
+    <input type="text" id="waName" placeholder="Full Name">
+    <input type="text" id="waLoc" placeholder="City / Location">
+    <textarea id="waPurpose" rows="3" placeholder="Purpose of connecting..."></textarea>
+    <button class="btn-gold" onclick="sendWhatsAppConcierge()">Send Message</button>
+</div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 1000, once: true });
 
-    function submitToWhatsApp(event) {
-        event.preventDefault();
+    function toggleWAPopup() {
+        const popup = document.getElementById('waPopup');
+        popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function sendWhatsAppConcierge() {
+        const name = document.getElementById('waName').value;
+        const loc = document.getElementById('waLoc').value;
+        const purpose = document.getElementById('waPurpose').value;
         
-        // Capture Form Data
+        if(!name || !loc) { alert("Please provide your name and location."); return; }
+
+        const message = `*Direct Connection Request*%0A%0A*Name:* ${name}%0A*Location:* ${loc}%0A*Purpose:* ${purpose}%0A%0AHello Sanju G, reaching out to you from your website.`;
+        window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
+        toggleWAPopup();
+    }
+
+    function submitToWhatsAppMain(event) {
+        event.preventDefault();
         const name = document.getElementById('name').value;
         const company = document.getElementById('company').value;
         const goal = document.getElementById('goal').value;
-        
-        // Build the Message
-        const message = `*Executive Briefing Request*%0A%0A*Name:* ${name}%0A*Company:* ${company}%0A*Goal:* ${goal}%0A%0AHello Sanju G, I have submitted my briefing on the website and would like to discuss structural growth and governance systems.`;
-        
-        // Open WhatsApp in a NEW tab (Keeping website open)
-        const whatsappURL = `https://wa.me/919599949991?text=${message}`;
-        window.open(whatsappURL, '_blank');
-        
-        // Optional: Alert the user
-        alert("Briefing captured. Opening WhatsApp to start our conversation...");
+        const message = `*Executive Briefing Request*%0A%0A*Name:* ${name}%0A*Company:* ${company}%0A*Goal:* ${goal}%0A%0AHello Sanju G, I would like to discuss structural growth and governance systems.`;
+        window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
     }
 </script>
 
