@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanju G | Growth Infrastructure & Channel Governance Architect</title>
     
-    <meta name="description" content="Sanju G - Architecting institutional growth and governance for national scale.">
-    <link rel="icon" type="image/png" href="SG.logo.v1.png">
+    <meta property="og:title" content="Sanju G | Growth Infrastructure Architect">
+    <meta property="og:description" content="Architecting the structural backbone for national QSR and Distribution scale.">
+    <meta property="og:image" content="SG.logo.v1.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -17,10 +18,8 @@
             --surface: #141414;
             --king-green: #0b4619;
             --gold: #d4af37;
-            --gold-light: #f1d279;
             --champagne: #f7e7ce;
             --white: #ffffff;
-            --glass: rgba(255, 255, 255, 0.03);
             --border: rgba(212, 175, 55, 0.2);
         }
 
@@ -34,276 +33,302 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .logo-text { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 
-        /* HEADER - Glassmorphism */
+        /* HEADER */
         header {
             position: fixed; width: 100%; padding: 15px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(10, 10, 10, 0.85); 
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
+            background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border); z-index: 1000;
         }
-
-        .logo-container { display: flex; align-items: center; gap: 15px; cursor: pointer; }
-        .logo-container img { height: 50px; width: auto; }
-        .logo-text { color: var(--gold); font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo-container img { height: 45px; width: auto; }
 
         nav a {
             color: var(--white); text-decoration: none; margin-left: 35px;
-            font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; 
+            font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; 
             transition: 0.3s; opacity: 0.7; font-weight: 600;
         }
         nav a:hover { color: var(--gold); opacity: 1; }
 
-        /* HERO - Professional Scale */
+        /* HERO */
         .hero {
-            height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
-            background: radial-gradient(circle at center, rgba(11, 70, 25, 0.15) 0%, rgba(10, 10, 10, 1) 70%),
-                        linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6)), 
+            height: 95vh; display: flex; flex-direction: column; justify-content: center; padding: 0 10%;
+            background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
-
         .hero span.label { 
             color: var(--gold); text-transform: uppercase; letter-spacing: 5px; 
             font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; display: block;
         }
-        .hero h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); color: var(--white); margin-bottom: 25px; line-height: 1; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--white); margin-bottom: 25px; line-height: 1.1; }
         .hero h1 span { color: var(--gold); }
         .hero p { 
-            font-size: 1.25rem; max-width: 750px; color: rgba(255,255,255,0.8); 
+            font-size: 1.2rem; max-width: 750px; color: rgba(255,255,255,0.8); 
             margin-bottom: 40px; border-left: 3px solid var(--gold); padding-left: 30px; 
         }
 
-        /* METRICS BAR */
-        .metrics-bar {
-            display: flex; gap: 60px; margin-top: 20px; 
-            border-top: 1px solid var(--border); padding-top: 40px;
+        /* AUTHORITY STRIP */
+        .authority-strip {
+            background: #050505; padding: 30px 10%; border-bottom: 1px solid var(--border);
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
         }
-        .metric-item { display: flex; flex-direction: column; }
-        .metric-value { color: var(--gold); font-size: 2.2rem; font-weight: 700; font-family: 'Playfair Display'; line-height: 1; }
-        .metric-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; margin-top: 8px; }
+        .authority-strip span { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+        .brand-item { font-weight: 700; color: white; opacity: 0.6; font-size: 0.9rem; }
 
-        /* SECTION HEADERS */
-        section { padding: 120px 10%; }
-        .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.7rem; margin-bottom: 20px; display: block; font-weight: 700; }
+        /* SECTIONS */
+        section { padding: 100px 10%; }
+        .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: 4px; font-size: 0.7rem; font-weight: 700; margin-bottom: 20px; display: block; }
         h2.section-title { font-size: 3rem; color: var(--white); margin-bottom: 50px; }
 
-        /* TRACK RECORD GRID - "Institutional Report" Style */
-        .track-record { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .record-card { 
-            background: var(--surface); padding: 50px 40px; 
-            border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative; overflow: hidden;
-        }
-        .record-card:hover { border-color: var(--gold); transform: translateY(-10px); background: #1a1a1a; }
-        .record-card h3 { color: var(--gold); margin-bottom: 20px; font-size: 1.5rem; letter-spacing: 1px; }
-        .record-card p { font-size: 0.95rem; opacity: 0.8; font-weight: 300; }
+        /* ABOUT GRID */
+        .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        .about-image { border: 1px solid var(--gold); padding: 15px; background: var(--surface); position: relative; }
+        .about-image img { width: 100%; filter: grayscale(0.5); display: block; }
 
-        /* METHODOLOGY - The Blueprint */
-        .timeline-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: var(--border); margin-top: 50px; border: 1px solid var(--border); }
-        .timeline-step { background: var(--charcoal); padding: 40px; transition: 0.3s; }
-        .timeline-step:hover { background: var(--surface); }
-        .step-num { font-size: 3rem; color: rgba(212, 175, 55, 0.15); font-family: 'Playfair Display'; font-weight: 900; margin-bottom: 10px; display: block; }
-        .timeline-step h4 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-
-        /* BUTTONS */
-        .btn-gold {
-            display: inline-block; padding: 20px 50px; background: var(--gold);
-            color: var(--charcoal); font-weight: 800; text-decoration: none;
-            text-transform: uppercase; letter-spacing: 2px; transition: 0.4s;
-            cursor: pointer; border: none; font-size: 0.8rem;
+        /* TRACK RECORD (4 CARDS) */
+        .track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .track-card { 
+            background: var(--surface); padding: 45px; border: 1px solid var(--border); 
+            transition: 0.4s; position: relative;
         }
-        .btn-gold:hover { background: var(--white); transform: scale(1.02); }
+        .track-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 0%; background: var(--gold); transition: 0.4s; }
+        .track-card:hover::before { height: 100%; }
+        .track-card:hover { transform: translateY(-10px); background: #1a1a1a; }
+        .track-card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
 
-        /* FORM / MODAL */
-        .modal-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.98); 
-            display: none; justify-content: center; align-items: center; z-index: 2000; backdrop-filter: blur(20px);
+        /* GOVERNANCE FRAMEWORK (4 PILLARS) */
+        .framework-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); margin-top: 50px; border: 1px solid var(--border); }
+        .pillar-box { background: var(--charcoal); padding: 40px; transition: 0.3s; }
+        .pillar-box:hover { background: var(--surface); }
+        .pillar-num { font-size: 3rem; color: rgba(212, 175, 55, 0.1); font-family: 'Playfair Display'; font-weight: 900; display: block; }
+        .pillar-box h4 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* CASE STUDY */
+        .case-block { 
+            background: var(--surface); border: 1px solid var(--border); padding: 60px; 
+            margin-top: 50px; position: relative;
         }
-        .modal-content { background: var(--surface); padding: 60px; border: 1px solid var(--gold); width: 95%; max-width: 500px; position: relative; }
-        .close-modal { position: absolute; top: 25px; right: 25px; color: var(--gold); font-size: 2rem; cursor: pointer; }
-        
-        .form-group { margin-bottom: 25px; }
-        .form-group label { display: block; font-size: 0.7rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 10px; font-weight: 700; }
-        .form-group input { width: 100%; padding: 15px; background: transparent; border: 1px solid var(--border); color: white; border-radius: 0; outline: none; }
+        .case-tag { position: absolute; top: -15px; left: 40px; background: var(--gold); color: black; padding: 6px 20px; font-size: 0.7rem; font-weight: 900; }
+
+        /* LEAD CAPTURE FORM */
+        .contact-card { 
+            max-width: 900px; margin: 0 auto; background: var(--surface); 
+            border: 1px solid var(--gold); padding: 60px; text-align: left;
+        }
+        .form-group { margin-bottom: 30px; }
+        .form-group label { display: block; font-size: 0.7rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 12px; font-weight: 700; }
+        .form-group input, .form-group select { 
+            width: 100%; padding: 18px; background: transparent; border: 1px solid var(--border); 
+            color: white; border-radius: 0; outline: none; font-family: 'Inter'; font-size: 0.9rem;
+        }
         .form-group input:focus { border-color: var(--gold); }
 
-        /* FLOATING WHATSAPP */
-        .wa-float {
-            position: fixed; bottom: 40px; right: 40px; background: #25D366;
-            width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4); transition: 0.3s; z-index: 1000; text-decoration: none;
+        .btn-gold {
+            display: inline-block; padding: 22px 50px; background: var(--gold);
+            color: black; font-weight: 800; text-decoration: none; text-transform: uppercase;
+            letter-spacing: 2px; font-size: 0.85rem; cursor: pointer; border: none; transition: 0.3s;
+            width: 100%; text-align: center;
         }
-        .wa-float:hover { transform: scale(1.1); }
+        .btn-gold:hover { background: var(--white); transform: scale(1.01); }
 
-        footer { background: #050505; padding: 100px 10% 50px; border-top: 1px solid var(--border); }
+        footer { background: #050505; padding: 80px 10% 40px; border-top: 1px solid var(--border); text-align: center; }
 
-        @media (max-width: 992px) {
-            .metrics-bar { gap: 30px; }
+        @media (max-width: 768px) { 
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-card { padding: 30px; }
             h2.section-title { font-size: 2.2rem; }
-        }
-        @media (max-width: 768px) {
-            nav { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .metrics-bar { flex-direction: column; gap: 30px; }
-            .logo-text { display: none; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container" onclick="window.scrollTo(0,0)">
+    <div class="logo-container">
         <img src="SG.logo.v1.png" alt="Sanju G Logo">
-        <div class="logo-text">SANJU G</div>
     </div>
     <nav>
+        <a href="#about">The Architect</a>
         <a href="#track-record">Execution</a>
-        <a href="#methodology">Governance</a>
-        <a href="#contact">Contact</a>
+        <a href="#framework">Governance</a>
+        <a href="#contact">Consultation</a>
     </nav>
 </header>
 
 <div class="hero">
     <span class="label" data-aos="fade-right">Growth Infrastructure Architect</span>
-    <h1 data-aos="fade-up">From Complexity to <br><span>Institutional Scale.</span></h1>
-    <p data-aos="fade-up" data-aos-delay="200">Building the high-yield structural backbone for national expansion—specializing in QSR, Building Materials, and complex distribution governance.</p>
-    
-    <div class="metrics-bar" data-aos="fade-up" data-aos-delay="400">
-        <div class="metric-item">
-            <span class="metric-value">100+</span>
-            <span class="metric-label">Institutional Channels</span>
-        </div>
-        <div class="metric-item">
-            <span class="metric-value">18+ Yrs</span>
-            <span class="metric-label">Industry Mastery</span>
-        </div>
-        <div class="metric-item">
-            <span class="metric-value">Pan India</span>
-            <span class="metric-label">Operational Footprint</span>
-        </div>
-    </div>
-
-    <div style="margin-top: 50px;" data-aos="fade-up" data-aos-delay="600">
-        <button class="btn-gold" onclick="openModal()">Request Executive Consultation</button>
+    <h1 data-aos="fade-up">Institutionalizing the <br><span>Future of Scale.</span></h1>
+    <p data-aos="fade-up" data-aos-delay="200">Architecting high-yield structural backbones for national expansion—specializing in chef-independent QSR models and deep distribution governance.</p>
+    <div style="margin-top: 30px;" data-aos="fade-up" data-aos-delay="400">
+        <a href="#contact" class="btn-gold" style="width: auto;">Initiate Executive Briefing</a>
     </div>
 </div>
 
-<section id="track-record">
-    <span class="section-label">Field-Tested Impact</span>
-    <h2 class="section-title">The Track Record</h2>
-    
-    <div class="track-record">
-        <div class="record-card" data-aos="fade-up">
-            <h3>Scale Architecture</h3>
-            <p>Transitioned local brands into national powerhouses by building 100+ high-performance channel partners from the ground up.</p>
+<div class="authority-strip">
+    <span>Trusted To Scale:</span>
+    <div class="brand-item">WOK N MOMO</div>
+    <div class="brand-item">TELECOM SYSTEMS</div>
+    <div class="brand-item">BUILDING MATERIALS</div>
+    <div class="brand-item">DISTRIBUTION NETWORKS</div>
+</div>
+
+<section id="about">
+    <div class="about-grid">
+        <div class="about-image" data-aos="fade-right">
+            <img src="https://via.placeholder.com/600x750/141414/d4af37?text=SG+Architect+Headshot" alt="Sanju G">
         </div>
-        <div class="record-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>Capital Deployment</h3>
-            <p>Architected high-yield ₹25L+ investment models, ensuring robust unit economics and rapid ROI for franchise networks.</p>
-        </div>
-        <div class="record-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Format Standardization</h3>
-            <p>Designed and scaled standardized showroom and outlet formats across diverse geographies, maintaining 100% brand integrity.</p>
-        </div>
-        <div class="record-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>Performance Governance</h3>
-            <p>Deployed rigorous KPI systems and daily review rhythms (DRR) for massive sales forces in the Telecom and QSR sectors.</p>
+        <div data-aos="fade-left">
+            <span class="section-label">Institutional Philosophy</span>
+            <h2 class="section-title" style="margin-bottom: 30px;">Architecture Over <br>Aspiration.</h2>
+            <p style="margin-bottom: 25px; opacity: 0.8; font-size: 1.1rem;">With 18+ years of industry mastery, I move organizations from "Chaos" to "Scale." My focus is not just growth, but **Channel Governance**—creating systems where performance is a standard, not an accident.</p>
+            <p style="opacity: 0.6; margin-bottom: 40px;">From architecting 100+ partner channels to designing ₹25L+ investment frameworks, I provide the structural blueprint for national dominance.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; border-top: 1px solid var(--border); padding-top: 30px;">
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem;">Diagnostic</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.5;">Audit of infrastructure leaks & unit economics.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem;">Accountability</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.5;">Implementation of digital review rhythms.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="methodology" style="background: var(--surface);">
-    <span class="section-label">The Framework</span>
-    <h2 class="section-title">Strategic Governance</h2>
-    <div class="timeline-container">
-        <div class="timeline-step" data-aos="fade-up">
-            <span class="step-num">01</span>
+<section id="track-record" style="background: var(--surface);">
+    <span class="section-label">Field-Tested Impact</span>
+    <h2 class="section-title">The Track Record</h2>
+    <div class="track-grid">
+        <div class="track-card" data-aos="fade-up">
+            <h3>Institutional Scale</h3>
+            <p>Built 100+ channel partners from the ground up, transitioning brands from local presence to national infrastructure.</p>
+        </div>
+        <div class="track-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Investment Architect</h3>
+            <p>Designed and launched ₹25L+ investment models, ensuring high-yield unit economics for franchisees and partners.</p>
+        </div>
+        <div class="track-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>National Branding</h3>
+            <p>Standardized multiple showroom and outlet formats, ensuring uniform customer experience and brand identity across zones.</p>
+        </div>
+        <div class="track-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Performance Governance</h3>
+            <p>Led massive sales teams in Telecom and QSR, implementing rigorous KPI systems and automated daily review rhythms.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="framework">
+    <span class="section-label">Strategic Governance</span>
+    <h2 class="section-title">The 4-Pillar Blueprint</h2>
+    <div class="framework-container">
+        <div class="pillar-box" data-aos="fade-up">
+            <span class="pillar-num">01</span>
             <h4>Diagnostic</h4>
-            <p>Audit of existing unit economics to identify infrastructure leaks and scaling bottlenecks.</p>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Deep audit of current operations to identify scaling bottlenecks and leaks.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="100">
-            <span class="step-num">02</span>
+        <div class="pillar-box" data-aos="fade-up" data-aos-delay="100">
+            <span class="pillar-num">02</span>
             <h4>Architecture</h4>
-            <p>Systemizing SOPs and Blueprints for regional and national distribution channels.</p>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Designing chef-independent SOPs and distribution governance blueprints.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="200">
-            <span class="step-num">03</span>
-            <h4>Governance</h4>
-            <p>Implementing accountability rhythms and digital audit manuals for 100% transparency.</p>
+        <div class="pillar-box" data-aos="fade-up" data-aos-delay="200">
+            <span class="pillar-num">03</span>
+            <h4>Accountability</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Deploying digital audit manuals and standardized review rhythms.</p>
         </div>
-        <div class="timeline-step" data-aos="fade-up" data-aos-delay="300">
-            <span class="step-num">04</span>
-            <h4>Expansion</h4>
-            <p>Executing high-velocity rollouts through standardized, institutional-grade infrastructure.</p>
+        <div class="pillar-box" data-aos="fade-up" data-aos-delay="300">
+            <span class="pillar-num">04</span>
+            <h4>Scaling</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Executing high-velocity national rollouts through systemized infrastructure.</p>
+        </div>
+    </div>
+</section>
+
+<section id="case-study" style="background: var(--surface);">
+    <span class="section-label">Featured Actuals</span>
+    <div class="case-block" data-aos="zoom-in">
+        <div class="case-tag">ACTIVE IMPACT: WOK N MOMO</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div>
+                <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 20px;">Chef-Independent <br>QSR Scale</h3>
+                <p style="opacity: 0.8;">Transitioning street-food concepts into institutional powerhouses via central kitchen governance and 100% supply standardization.</p>
+            </div>
+            <div style="border-left: 1px solid var(--border); padding-left: 40px;">
+                <p style="color: var(--gold); font-weight: 700; margin-bottom: 10px;">KEY OUTCOMES:</p>
+                <ul style="list-style: none; font-size: 0.9rem; opacity: 0.7;">
+                    <li style="margin-bottom: 10px;">• Rapid ROI (6-8 Months)</li>
+                    <li style="margin-bottom: 10px;">• Zero Chef Dependency</li>
+                    <li>• Pan-India Format Standardization</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="contact" style="text-align: center;">
-    <div style="border: 1px solid var(--gold); padding: 100px 40px; background: var(--surface);" data-aos="zoom-in">
-        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; color: var(--gold); margin-bottom: 25px;">Architect Your Transformation.</h2>
-        <p style="margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; opacity: 0.8; font-size: 1.1rem;">Selective advisory for organizations committed to national-level expansion and institutional-grade governance.</p>
-        <button class="btn-gold" onclick="openModal()">Schedule Strategy Session</button>
+    <span class="section-label">Governance Consultation</span>
+    <h2 class="section-title">Ready for Structural Transformation?</h2>
+    
+    <div class="contact-card" data-aos="fade-up">
+        <form id="leadForm" onsubmit="submitToWhatsApp(event)">
+            <div class="form-group">
+                <label>FULL NAME</label>
+                <input type="text" id="name" required placeholder="Ex: Rajesh Sharma">
+            </div>
+            <div class="form-group">
+                <label>COMPANY / INDUSTRY</label>
+                <input type="text" id="company" required placeholder="Ex: QSR / Building Materials">
+            </div>
+            <div class="form-group">
+                <label>PRIMARY GOAL</label>
+                <select id="goal" required>
+                    <option value="" disabled selected>Select Objective</option>
+                    <option value="National Expansion">National Expansion</option>
+                    <option value="Channel Governance">Channel Governance</option>
+                    <option value="Unit Economics Optimization">Unit Economics Optimization</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-gold">Capture Details & Open WhatsApp</button>
+        </form>
+        <p style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 25px; font-style: italic;">Note: Currently accepting only 1 new advisory role for Q2 2026.</p>
     </div>
 </section>
 
 <footer>
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 50px;">
-        <div>
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                <img src="SG.logo.v1.png" style="height: 40px;" alt="Sanju G">
-                <span style="color: var(--gold); font-size: 1.5rem; font-family: 'Playfair Display'; font-weight: 700;">SANJU G</span>
-            </div>
-            <p style="opacity: 0.5; font-size: 0.8rem; max-width: 350px;">Architecting high-yield systems for national expansion and deep channel governance across QSR and Industrial sectors.</p>
-        </div>
-        <div>
-            <h4 style="color: var(--gold); margin-bottom: 25px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;">Contact</h4>
-            <ul style="list-style: none; font-size: 0.9rem;">
-                <li style="margin-bottom: 15px;"><a href="mailto:contact@sanjugupta.com" style="color: var(--champagne); text-decoration: none; opacity: 0.8;">contact@sanjugupta.com</a></li>
-                <li><a href="https://www.linkedin.com/in/sanjugupta01/" target="_blank" style="color: var(--champagne); text-decoration: none; opacity: 0.8;">LinkedIn Profile</a></li>
-            </ul>
-        </div>
-    </div>
-    <p style="text-align: center; opacity: 0.1; font-size: 0.7rem; border-top: 1px solid var(--border); margin-top: 80px; padding-top: 40px; letter-spacing: 2px;">© 2026 SANJU GUPTA | ARCHITECTING THE FUTURE OF CHANNEL GOVERNANCE</p>
+    <img src="SG.logo.v1.png" style="height: 40px; margin-bottom: 20px;" alt="Sanju G">
+    <p style="opacity: 0.3; font-size: 0.7rem; letter-spacing: 2px;">© 2026 SANJU GUPTA | ARCHITECTING THE FUTURE OF CHANNEL GOVERNANCE</p>
 </footer>
-
-<a href="https://wa.me/919599949991?text=Hello%20Sanju%20G,%20I%20would%20like%20to%20discuss%20structural%20growth%20consultancy." class="wa-float" target="_blank">
-    <svg width="35" height="35" fill="white" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-</a>
-
-<div class="modal-overlay" id="consultationModal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
-        <h2 style="color: var(--gold); text-align: center; margin-bottom: 40px; font-family: 'Playfair Display';">Executive Briefing</h2>
-        <form onsubmit="sendToWhatsApp(event)">
-            <div class="form-group"><label>FULL NAME</label><input type="text" id="userName" required placeholder="Ex. Rajesh Sharma"></div>
-            <div class="form-group"><label>COMPANY / INDUSTRY</label><input type="text" id="userIndustry" required placeholder="Ex. QSR / Hospitality"></div>
-            <div class="form-group"><label>CONSULTATION GOAL</label><input type="text" id="userGoal" required placeholder="Ex. National Expansion Strategy"></div>
-            <button type="submit" class="btn-gold" style="width: 100%;">Submit Briefing</button>
-        </form>
-    </div>
-</div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 1000, once: true });
-    
-    function openModal() { document.getElementById('consultationModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    function closeModal() { document.getElementById('consultationModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
-    
-    function sendToWhatsApp(event) {
+
+    function submitToWhatsApp(event) {
         event.preventDefault();
-        const name = document.getElementById('userName').value;
-        const industry = document.getElementById('userIndustry').value;
-        const goal = document.getElementById('userGoal').value;
-        const message = `*Executive Briefing Request*%0AName: ${name}%0AIndustry: ${industry}%0AGoal: ${goal}%0A%0AHello Sanju G, I am interested in architecting structural growth for my organization.`;
-        window.open(`https://wa.me/919599949991?text=${message}`, '_blank');
-        closeModal();
+        
+        // Capture Form Data
+        const name = document.getElementById('name').value;
+        const company = document.getElementById('company').value;
+        const goal = document.getElementById('goal').value;
+        
+        // Build the Message
+        const message = `*Executive Briefing Request*%0A%0A*Name:* ${name}%0A*Company:* ${company}%0A*Goal:* ${goal}%0A%0AHello Sanju G, I have submitted my briefing on the website and would like to discuss structural growth and governance systems.`;
+        
+        // Open WhatsApp in a NEW tab (Keeping website open)
+        const whatsappURL = `https://wa.me/919599949991?text=${message}`;
+        window.open(whatsappURL, '_blank');
+        
+        // Optional: Alert the user
+        alert("Briefing captured. Opening WhatsApp to start our conversation...");
     }
 </script>
+
 </body>
 </html>
